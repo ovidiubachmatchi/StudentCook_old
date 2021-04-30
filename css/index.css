@@ -1,0 +1,265 @@
+html {
+scroll-behavior: smooth;
+}
+body {
+  background-color: #0f0532;
+}
+.just-phone {
+  display: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+.section 
+{
+    width: 100%; 
+    height: 100vh;
+    background-color: rgb(15, 5, 50);
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.landing-page > a,a:link, a:visited, a:active {
+  color: rgb(228, 200, 225);
+  text-decoration: none;
+  font-size: 100%;
+  transition: transform 1s 0s;
+}
+
+.landing-page a:hover {
+  text-decoration: none;
+  transform: scale(1.2, 1.2);
+  transition: transform 2s 0s;
+}
+#about a {
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+}
+.card p {
+  color: rgb(119, 161, 253);
+  font-size: 155%;
+  text-align: center;
+  font-family: 'Tinos', serif;
+}
+.landing-page {
+    background: url("../pictures/landing-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(15, 5, 50);
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem .3rem rgba(195, 190, 212, 0.247);
+    font-size: 9mm;
+    overflow:hidden;
+    z-index: 1;
+}
+.landing-page-icons img {
+    font-size: 35rem;
+    color: #a79a2d;
+    position: absolute;
+    height: 30%;
+    transform: translate(-50%, -50%) scale(0);
+    text-shadow: 0.2rem 0.2rem 0.2rem #000;
+    transition: transform 0.3s;
+}
+  
+.landing-page-icons img.change {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s 0.3s;
+}
+
+
+.container-card {
+  padding: 2px 16px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: auto;
+}
+.cook {
+  margin-top: 0%;
+  width: max-content;
+  position: absolute;
+}
+#about {
+  justify-content: center;
+  align-items: center;
+}
+.contact-banner {
+  top: 150px;
+  left: -290px;
+  width: 350px;
+  position: fixed;
+  transition: left 0.5s;
+  cursor:unset;
+}
+.contact-banner:hover {
+  left: -110px;
+  transition: left 0.5s;
+  cursor: pointer;
+}
+.in-line > a {
+  font-size: 100px;
+  padding: 3cm 3cm;
+  transition: font-size 1s;
+}
+.in-line > a:hover {
+  font-size: 120px;
+  transition: font-size 1s;
+}
+.section-2 {
+  font-size: 0.5cm;
+}
+
+.cook a {
+  font-size: 200%;
+  width: 100px;
+  position: relative;
+}
+.cook a:hover {
+  color: white;
+}
+.section-2 > a {
+  text-align: center;
+  position: absolute;
+  font-size: 1cm;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
+  transition: all 1s;
+}
+.section-2 > a:hover {
+  font-size: 1.25cm;
+  color: rgb(201, 201, 201);
+  transition: all 1s;
+}
+a img { border: 0; }
+.in-line a:hover {
+  color: rgb(183, 210, 250);
+  text-shadow: red;
+  font-size: 4cm;
+  transition: all 1s;
+}
+.in-line a {
+  color: rgb(250, 249, 244);
+  transition: all 1s;
+}
+#about {
+  max-width: 100%;
+  align-items: center;
+}
+.section-2 img {
+  margin-bottom: 10%;
+}
+p {
+}
+.section-3-home {
+  display: none;
+}
+
+
+/* Portrait */
+@media (orientation: portrait)
+{ 
+  .section-2 {
+    margin-top: 15%;
+    margin-bottom: 60%;
+  }
+  .section-2 card {
+    padding-bottom: 50%;
+  } 
+  .section-3 {
+    margin-top: 50%;
+  }
+  #about a {
+    padding-top: 25%;
+    padding-bottom: 25%;
+    display: block;
+  }
+    .cook {
+      font-size: 50%;
+      
+      padding-top: 15%;
+      padding-bottom: 15%;
+    }
+    .landing-page a {
+      font-size: 50%
+    }
+   .section-2 {
+     display: inline-block;
+   }
+   .section-2 .card {
+     padding-left: 0%;
+     font-size: 85%;
+     width: 90%;
+     margin-left: 5px;
+     margin: auto;
+     padding: 10px;
+   }
+   .section-3 {
+    visibility: visible;
+  }
+  .card p {
+    text-align: center;
+      margin: 0 0;
+      width: 100%;
+      padding-left: 0;
+   }
+   .card {
+    position: relative;
+   }
+   .cook {
+     position: relative;
+     text-align: center;
+     font-size: 120%;
+   }
+   .contact-banner {
+    display: none;
+   }
+   .section-3 a {
+     position: line;
+   }
+.section-3 {
+  position: absolute;
+  
+  margin: auto;
+  width: 50%;
+    width: 100%; 
+    height: 100vh;
+    background-color: rgb(15, 5, 50);
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+.section-3 {
+  width: 100%;
+}
+.in-line > a {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin-left: 5px;
+  padding-top: 30px;
+  transition: font-size 1s;
+}
+.in-line i {
+  text-align: center;
+  margin-left: 5px;
+}
+.in-line > a:hover {
+  font-size: 50px;
+  transition: font-size 1s;
+}
+
+}
