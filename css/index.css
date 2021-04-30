@@ -185,6 +185,9 @@ p {
     padding-bottom: 25%;
     display: block;
   }
+  #about a:hover {
+    font-size: 200%;
+  }
     .cook {
       font-size: 50%;
       
