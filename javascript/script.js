@@ -11,4 +11,5 @@ setInterval(() => {
 		icons[1].classList.add("change")
 		i=0
 	}
+	console.log(i)
 }, 3500)

@@ -7,6 +7,11 @@ body {
 .just-phone {
   display: none;
 }
+.contact-page{
+  background: url("../pictures/contact-bg.png") no-repeat;
+ 
+  background-size: 100% 100%;
+}
 * {
     padding: 0;
     margin: 0;
@@ -102,15 +107,7 @@ body {
   transition: left 0.5s;
   cursor: pointer;
 }
-.in-line > a {
-  font-size: 100px;
-  padding: 3cm 3cm;
-  transition: font-size 1s;
-}
-.in-line > a:hover {
-  font-size: 120px;
-  transition: font-size 1s;
-}
+
 .section-2 {
   font-size: 0.5cm;
 }
@@ -128,16 +125,7 @@ body {
   transition: all 1s;
 }
 a img { border: 0; }
-.in-line a:hover {
-  color: rgb(183, 210, 250);
-  text-shadow: red;
-  font-size: 4cm;
-  transition: all 1s;
-}
-.in-line a {
-  color: rgb(250, 249, 244);
-  transition: all 1s;
-}
+
 #about {
   max-width: 100%;
   align-items: center;
@@ -145,37 +133,43 @@ a img { border: 0; }
 .section-2 img {
   margin-bottom: 10%;
 }
-p {
+@media (orientation: landscape)
+{
+  .landscape {
+    display: none;
 }
 .section-3-home {
   display: none;
 }
-
-
+}
 /* Portrait */
 @media (orientation: portrait)
 { 
-  .landing-page a:hover {
-    font-size: 60%
+  .portrait i {
+    display: block;
+    margin-bottom: 50%;
+    color: rgb(250, 249, 244);
+    font-size: 550%
+  }
+  .portrait {
+    align-items: center;
+    text-align: center;
   }
   .section-2 {
     margin-top: 15%;
     margin-bottom: 60%;
   }
   .section-3 {
-    margin-top: 50%;
+    margin-top: 40%;
   }
   #about a {
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 7%;
+    padding-bottom: 7%;
     display: block;
-    
+    font-size: 180%;
   }
   #about > a:hover {
-    font-size: 200%;
-  }
-  .landing-page a {
-    font-size: 70%
+    font-size: 180%;
   }
    .section-2 {
      display: inline-block;
@@ -183,7 +177,7 @@ p {
    .section-2 .card {
      padding-left: 0%;
      font-size: 85%;
-     width: 90%;
+     width: 88%;
      margin-left: 5px;
      margin: auto;
      padding: 10px;
@@ -223,22 +217,15 @@ p {
 .section-3 {
   width: 100%;
 }
+.landing-page > a,a:link, a:visited, a:active {
+  color: rgb(228, 200, 225);
+  text-decoration: none;
+  font-size: 66%;
+  transition: transform 1s 0s;
+}
 
-.in-line > a {
-  font-size: 50px;
-  display: block;
-  text-align: center;
-  margin-left: 5px;
-  padding-top: 30px;
-  transition: font-size 1s;
-}
-.in-line i {
-  text-align: center;
-  margin-left: 5px;
-}
-.in-line > a:hover {
-  font-size: 50px;
-  transition: font-size 1s;
+.landing-page a:hover {
+  transform: scale(1, 1);
 }
 
 }
