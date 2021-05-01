@@ -133,6 +133,50 @@ a img { border: 0; }
 .section-2 img {
   margin-bottom: 10%;
 }
+#link-1 {
+  position: absolute;
+  left: 27.5%;
+  top: 44%;
+  font-size: 9vw;
+  color:rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  text-size-adjust:none;
+}
+#link-2 {
+  position: absolute;
+  left: 45.5%;
+  top: 52%;
+  font-size: 9vw;
+  color:rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  text-size-adjust:none;
+}
+#link-3 {
+  position: absolute;
+  left: 62.6%;
+  top: 31.8%;
+  font-size: 9vw;
+  color:rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  text-size-adjust:none;
+}
+#homepage-contact-link {
+  position: absolute;
+  left: 39%;
+  top: 77.8%;
+  font-size: 5vw;
+  color:rgb(255, 255, 255)
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  text-size-adjust:none;
+}
 @media (orientation: landscape)
 {
   .landscape {
@@ -227,5 +271,8 @@ a img { border: 0; }
 .landing-page a:hover {
   transform: scale(1, 1);
 }
-
+.click-text-landing {
+  position: relative;
+  top: -3%;
+}
 }
