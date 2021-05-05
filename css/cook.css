@@ -85,6 +85,7 @@ ul {
     }
 }
 #ui-id-1 {
+	color: white;
     position: absolute;
     top: 100%;
     left: 0;
@@ -111,6 +112,15 @@ ul {
     background-clip: padding-box;
     *border-right-width: 2px;
     *border-bottom-width: 2px;
+}
+#ui-id-1:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #5535E2;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
 }
 .ui-autocomplete {
     position: absolute;
@@ -141,7 +151,7 @@ ul {
     *border-bottom-width: 2px;
 }
 
-a .ui-corner-all {
+a.ui-corner-all {
     display: block;
     padding: 3px 15px;
     clear: both;
@@ -152,7 +162,7 @@ a .ui-corner-all {
     text-decoration: none;
 }
 
-.ui-state-hover, .ui-state-active {
+.ui-state-hover {
     color: #ffffff;
     text-decoration: none;
     background-color: #5535E2;
