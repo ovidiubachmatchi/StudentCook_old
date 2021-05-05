@@ -3,6 +3,12 @@
     margin: 0;
     font-size: 1.5vw;
     background-color: rgb(19, 10, 56);
+    text-decoration: none;
+}
+.ingredients li {
+    text-decoration: none;
+    padding-top: 10px;
+    background-color: inherit;
 }
 html {
     width: 100%;
@@ -34,22 +40,22 @@ html {
     background-color: #2b2b2b;
 }
 .input-search:active, .input-search:hover, .input-search:focus  {
-    background-color: #302f2f;
+    background-color: #161b46;
 }
-.search-table button {
-    top: 10%;
-    position: fixed;
+ul { 
+    list-style: none;
 }
-button {
-    font-size: 80%;
-    background-color: rgb(60, 29, 199);
-    padding: 0.5% 1.5% 0.5% 1.5%;
+.close {
+    background-color: inherit;
+    cursor: pointer;
     position: relative;
-    display: block;
+    top: 50%;
+    left: 10px;
+    padding: 12px 16px;
+    margin-right: 10px;
+    transform: translate(0%, -50%);
 }
-.button3 { left: 4.5%;}
-.button2 { left: 18.25%; }
-.button1 { left: 11.8%;}
+.close:hover {color: rgb(60, 29, 199);}
 .search-table {
     width: 24%;
     height: 100%;
@@ -63,7 +69,13 @@ button {
 }
 
 .meals {
-    margin-left: 30%;
+    margin-top: 10%;
+    position: fixed;
+    background-color: inherit;
+}
+.meals .ingredients{
+    
+    background-color: inherit;
 }
 @media (orientation: portrait)
 {

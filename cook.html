@@ -18,16 +18,16 @@
     <div class="cook-page">
         <div class="search-table">
             <input 
-            type="text"
-            list="ingredients" 
-            class="input-search" 
-            placeholder="Add an ingredient" 
-            id="ingredient"
-            onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('btnSearch').click()">
-        </div>
-        <div class="meals">
-            <h1 id="demo">There are no ingredients</h1>
+                type="text"
+                list="ingredients" 
+                class="input-search" 
+                placeholder="Add an ingredient" 
+                id="ingredient">
+            <div class="meals">
+                <ul class="ingredients" id="ingredients_section">
+                    There are no ingredients
+                </ul>
+            </div>
         </div>
     </div>
 </body>

@@ -2,20 +2,27 @@ var ingredients_list = new Set()
 
 function put_ingredient(ingredient){
     if (!(ingredient == ""))
-    if(ingredients_list.has(ingredient))
-    ingredients_list.delete(ingredient)
-    else
     ingredients_list.add(ingredient)
     show_ingredients()
 }
 function show_ingredients(){
+    var val = ""
      if (ingredients_list.size == 0)
-     document.getElementById("demo").innerHTML = "There are no ingredients"
+     document.getElementById("ingredients_section").innerHTML = "There are no ingredients"
      else
      {
-        var val = ""
         for (item of ingredients_list.values())
-        val+=item + "<br>"; 
-        document.getElementById("demo").innerHTML = val
+        {
+        var button = `<span class="close" onclick="delete_ingredient('`+item+`')">x</span>`
+        val += "<li>"+button+item+"</li>";
+        }
+        document.getElementById("ingredients_section").innerHTML = val
      }
 }
+function delete_ingredient(ingredient){
+    var res = ingredient.slice(0, 5);
+    console.log(ingredient.slice(1,2))
+    ingredients_list.delete(ingredient)
+    show_ingredients()
+}
+//<li>Agnes<span class="close">x</span></li>
