@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
 .landing-page > a,a:link, a:visited, a:active {
   color: rgb(228, 200, 225);
   text-decoration: none;
@@ -171,7 +172,7 @@ a img { border: 0; }
   left: 39%;
   top: 77.8%;
   font-size: 5vw;
-  color:rgb(255, 255, 255)
+  color:rgb(255, 255, 255);
   -webkit-text-size-adjust:none;
   -ms-text-size-adjust:none;
   -moz-text-size-adjust:none;
@@ -179,7 +180,7 @@ a img { border: 0; }
 }
 @media (orientation: landscape)
 {
-  .landscape {
+.landscape {
     display: none;
 }
 .section-3-home {
@@ -188,7 +189,16 @@ a img { border: 0; }
 }
 /* Portrait */
 @media (orientation: portrait)
-{ 
+{
+  #error404 {
+    color: white;
+    text-align: center;
+    top: 35%;
+    position: absolute;
+  }
+  .contact-page {
+    display: none;
+  }
   .portrait i {
     display: block;
     margin-bottom: 50%;
