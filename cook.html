@@ -8,20 +8,23 @@
     <script src="javascript/cook.js"></script> 
     <link rel="stylesheet" href="css/cook.css">
     <script src="https://kit.fontawesome.com/619a94c9b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascript/cook_autocomplete_search.js"></script>
 </head>
 <body>
     <div class="cook-page">
         <div class="search-table">
-            <input type="text"
+            <input 
+            type="text"
             list="ingredients" 
             class="input-search" 
             placeholder="Add an ingredient" 
             id="ingredient"
             onkeydown = "if (event.keyCode == 13)
                         document.getElementById('btnSearch').click()">
-            <button class="button1" type="submit" onclick="put_ingredient()">Add</button>
-            <button class="button2" type="submit" onclick="remove_ingredient()">Remove</button>
-            <button class="button3" type="submit" onclick="show_ingredients()">Show</button>
         </div>
         <div class="meals">
             <h1 id="demo">There are no ingredients</h1>

@@ -1,11 +1,17 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    background-color: rgb(19, 10, 56);
 }
 html {
     width: 100%;
     height: 100%;
+}
+.ui-menu .ui-menu-item a{
+    background:red;
+    height:10px;
+    font-size:8px;
 }
 .cook-page {
     width: 100%; 
@@ -23,7 +29,7 @@ html {
     text-align: center;
     border: 2px solid rgba(60, 29, 199, 0.788);
     border-radius: 5px;
-    height: 40px;
+    height: 5%;
     color: white;
     background-color: #2b2b2b;
 }
@@ -34,12 +40,15 @@ html {
     top: 10%;
     position: fixed;
 }
-button { 
-    background-color: rgba(60, 29, 199, 0.788); 
-    padding: 10px 25px 10px 25px;
+button {
+    font-size: 80%;
+    background-color: rgb(60, 29, 199);
+    padding: 0.5% 1.5% 0.5% 1.5%;
+    position: relative;
+    display: block;
 }
 .button3 { left: 4.5%;}
-.button2 { left: 18.5%; }
+.button2 { left: 18.25%; }
 .button1 { left: 11.8%;}
 .search-table {
     width: 24%;
@@ -62,4 +71,56 @@ button {
         display: none;
         background-color: red;
     }
+}
+#ui-id-1 {
+    color: white;
+}
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;   
+    padding: 4px 0;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: rgba(60, 29, 199, 0.788);
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #5535E2;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
 }

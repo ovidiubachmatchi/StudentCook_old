@@ -1,9 +1,12 @@
 var ingredients_list = new Set()
 
-function put_ingredient(){
-    var ingredient = document.getElementById("ingredient").value;
+function put_ingredient(ingredient){
     if (!(ingredient == ""))
+    if(ingredients_list.has(ingredient))
+    ingredients_list.delete(ingredient)
+    else
     ingredients_list.add(ingredient)
+    show_ingredients()
 }
 function show_ingredients(){
      if (ingredients_list.size == 0)
@@ -15,9 +18,4 @@ function show_ingredients(){
         val+=item + "<br>"; 
         document.getElementById("demo").innerHTML = val
      }
-}
-function remove_ingredient(){
-    var ingredient = document.getElementById("ingredient").value;
-    if(ingredients_list.has(ingredient))
-    ingredients_list.delete(ingredient)
 }
