@@ -13,7 +13,7 @@ function show_ingredients(){
      {
         for (item of ingredients_list.values())
         {
-        var button = `<span class="close" onclick="delete_ingredient('`+item+`')">x</span>`
+        var button = `<span class="close" onclick="delete_ingredient('`+item+`')"><i class="fas fa-trash"></i></span>`
         val += "<li>"+button+item+"</li>";
         }
         document.getElementById("ingredients_section").innerHTML = val
@@ -25,4 +25,3 @@ function delete_ingredient(ingredient){
     ingredients_list.delete(ingredient)
     show_ingredients()
 }
-//<li>Agnes<span class="close">x</span></li>

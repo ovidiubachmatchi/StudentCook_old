@@ -10,6 +10,12 @@
     padding-top: 10px;
     background-color: inherit;
 }
+.ui-autocomplete { 
+    max-height: 19%;
+    max-width: 20%;
+    overflow-y: scroll;
+     overflow-x: hidden;
+    }
 html {
     width: 100%;
     height: 100%;
@@ -19,6 +25,7 @@ html {
     height:10px;
     font-size:8px;
 }
+
 .cook-page {
     width: 100%; 
     height: 100vh;
@@ -74,7 +81,8 @@ ul {
     background-color: inherit;
 }
 .meals .ingredients{
-    
+    font-size: 150%;
+    scroll-behavior: smooth;
     background-color: inherit;
 }
 @media (orientation: portrait)
@@ -85,42 +93,7 @@ ul {
     }
 }
 #ui-id-1 {
-	color: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    display: none;
-    min-width: 160px;   
-    padding: 4px 0;
-    margin: 0 0 10px 25px;
-    list-style: none;
-    background-color: rgba(60, 29, 199, 0.788);
-    border-color: #ccc;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-style: solid;
-    border-width: 1px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    *border-right-width: 2px;
-    *border-bottom-width: 2px;
-}
-#ui-id-1:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #5535E2;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    background-image: none;
+    color: white;
 }
 .ui-autocomplete {
     position: absolute;
@@ -139,19 +112,20 @@ ul {
     border-style: solid;
     border-width: 1px;
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
     background-clip: padding-box;
-    *border-right-width: 2px;
-    *border-bottom-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+i {
+    background-color: inherit;
+    color: rgb(255, 250, 250);
 }
 
-a.ui-corner-all {
+.ui-menu-item > a.ui-corner-all {
     display: block;
     padding: 3px 15px;
     clear: both;
@@ -162,12 +136,11 @@ a.ui-corner-all {
     text-decoration: none;
 }
 
-.ui-state-hover {
+.ui-state-hover, .ui-state-active {
     color: #ffffff;
     text-decoration: none;
     background-color: #5535E2;
     border-radius: 0px;
     -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
     background-image: none;
 }
