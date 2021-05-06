@@ -15,19 +15,40 @@
     <script src="javascript/cook_autocomplete_search.js"></script>
 </head>
 <body>
+    <div class="portrait">
+        <p>Rotate your display</p>
+    </div>
     <div class="cook-page">
-        <div class="search-table">
-            <input 
-                type="text"
-                list="ingredients" 
-                class="input-search" 
-                placeholder="Add an ingredient"
-				onfocus="this.value=''"				
-                id="ingredient">
-            <div class="meals">
-                <ul class="ingredients" id="ingredients_section">
-                    There are no ingredients
-                </ul>
+
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div> 
+        <div id="page">
+            <div class="search-table">
+                <a onclick="openForm()"><i class="fas fa-user-circle"></i></a>
+                <input 
+                    type="text"
+                    list="ingredients" 
+                    class="input-search" 
+                    placeholder="Add an ingredient"
+                    onfocus="this.value=''"				
+                    id="ingredient">
+                <div class="meals">
+                    <ul class="ingredients" id="ingredients_section">
+                        There are no ingredients
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

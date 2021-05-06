@@ -25,3 +25,12 @@ function delete_ingredient(ingredient){
     ingredients_list.delete(ingredient)
     show_ingredients()
 }
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("page").style.display = "none";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("page").style.removeProperty("display");
+  } 
