@@ -26,11 +26,11 @@ function delete_ingredient(ingredient){
     show_ingredients()
 }
 function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.getElementById("page").style.display = "none";
+    $("#login").show(400,"linear");
+    $("#page").hide(200);
   }
   
   function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-    document.getElementById("page").style.removeProperty("display");
+    $("#login").hide();
+    $("#page").show(1000);
   } 
