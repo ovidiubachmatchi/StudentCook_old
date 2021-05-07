@@ -26,11 +26,16 @@ function delete_ingredient(ingredient){
     show_ingredients()
 }
 function openForm() {
-    $("#login").show(400,"linear");
-    $("#page").hide(200);
-  }
-  
-  function closeForm() {
-    $("#login").hide();
-    $("#page").show(1000);
-  } 
+  document.getElementById('blur_overlay').classList.add("blur");
+  $("#login").fadeIn(100);
+  $("#signup").hide();
+}
+function openSignUpForm() {
+  $("#signup").fadeIn(100);
+  $("#login").hide();
+}
+function closeForm() {
+  document.getElementById('blur_overlay').classList.remove("blur");
+   $("#login").hide();
+   $("#signup").hide();
+ }
