@@ -39,3 +39,4 @@ function closeForm() {
    $("#login").hide();
    $("#signup").hide();
  }
+
