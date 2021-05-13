@@ -39,7 +39,6 @@ body {
 }
 
 .landing-page a:hover {
-  text-decoration: none;
   transform: scale(1.2, 1.2);
   transition: transform 2s 0s;
 }
