@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Could I Cook?</title>
+    <title>StudentCook</title>
     <link rel="stylesheet" href="css/cook.css">
     <script src="https://kit.fontawesome.com/619a94c9b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -25,7 +25,7 @@ session_start();
     <div class="cook-page">
         <div id="page">
 <!-- Log in form -->
-            <div class="form-popup" id="login">
+    <div class="form-popup" id="login">
             <form action="php/login.inc.php" method="post" class="form-container">
                 <p id="error_login" style='text-align: center'></p>
                     <label for="email_login"><b>Email</b></label>
@@ -37,7 +37,7 @@ session_start();
                     <b id="sign-up-message">Don't have an account yet? <a onclick="openSignUpForm()" id="sign-up-anchor">Sign Up</a></b>
                     <button type="submit" name="submit" class="btn">Log in</button>
             </form>
-            </div>
+    </div>
 <!-- Sign up form -->
             <div class="form-popup" id="signup">
                 <form action="php/signup.inc.php" method="post" class="form-container">
@@ -61,10 +61,15 @@ session_start();
                     <?php 
                         if(isset($_SESSION["email"]))
                             echo "<a href='php/logout.inc.php' id='logout'><i class='fas fa-sign-out-alt'></i></a>";
-                        else
-                            echo "<a onclick='openForm()'><i class='fas fa-user-circle'></i></a>";
+                        else {
+                            echo "<a onclick='openForm()'><i class='fas fa-user-circle'></i></a>"; }
                     ?>
                 <input type="text" list="ingredients" class="input-search" placeholder="Add an ingredient" onfocus="this.value=''" id="ingredient">
+                <?php
+                if(isset($_SESSION["access_user"]))
+                if($_SESSION["access_user"] == 'admin') 
+                    echo "<a href='add_recipe.php'><i class='fas fa-plus-circle' id='admin'> Add a recipe</i></a>";
+                ?>
                 <div class="meals">
                 <button onclick="showRecipes()" id="show_recipes">Show recipes</button>
                     <table>

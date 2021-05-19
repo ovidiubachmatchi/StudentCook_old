@@ -8,35 +8,62 @@ function put_ingredient(ingredient){
 // show recipes
 function showRecipes() {
   if (ingredients_list.size != 0){
-  var ingredients = [...ingredients_list].join(' ')
+  
+  var ingredients = [...ingredients_list].join(',') 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("recipes").innerHTML = this.responseText;
+      sort_div()
     }
   };
   xhttp.open("GET", "php/get_recipes.inc.php?ingredients="+ingredients, true);
   xhttp.send();
   }
 }
+function sort_div() {
+  var $wrapper = $('#recipes');
 
+  $wrapper.find('.recipe').sort(function (a, b) {
+      return +a.dataset.sort - +b.dataset.sort;
+  })
+  .appendTo( $wrapper );
+}
 function show_ingredients(){
     var val = ""
+    var val_input = ""
      if (ingredients_list.size == 0){
      document.getElementById("ingredients_section").innerHTML = "There are no ingredients"
-     document.getElementById("show_recipes").style.display = "none"
+     try {
+      
+      document.getElementById("recipes").innerHTML = ""
+      document.getElementById("show_recipes").style.display = "none"
      }
+     catch {}
+      try { document.getElementById("ingredients_section_input").value = '' }
+      catch {}
+     
+    }
      else
      {
-       document.getElementById("show_recipes").style.display = "block"
         for (item of ingredients_list.values())
         {
         var button = `<span class="close" onclick="delete_ingredient('`+item+`')"><i class="fas fa-trash"></i></span>`
         val += "<li>"+button+item+"</li>";
+        val_input += item+',';
         }
         document.getElementById("ingredients_section").innerHTML = val
+        try {
+        document.getElementById("ingredients_section_input").value = val_input.slice(0, -1)
+        }
+        catch {  }
+        try {
+          document.getElementById("show_recipes").style.display = "block"
+          }
+        catch { }
      }
 }
+
 function delete_ingredient(ingredient){
     ingredients_list.delete(ingredient)
     show_ingredients()
@@ -98,7 +125,4 @@ function wrongPassword() {
 function stmtFailedLogin() {
   openForm();
   document.getElementById('error_login').innerHTML = 'Something went wrong';
-}
-function show_recipes() {
-  
 }

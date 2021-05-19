@@ -24,6 +24,7 @@ function loginUser($connection, $email, $password)
         session_start();
         $_SESSION["id"] = $emailExists["id_db"];
         $_SESSION["email"] = $emailExists["email_db"];
+        $_SESSION["access_user"] = $emailExists["access_user"];
         header("location: ../cook.php?loginSuccess");
         exit();
     }
@@ -80,6 +81,20 @@ function password_match_error($pwd, $password_repeat)
     if($pwd === $password_repeat)
         return false;
     return true;
+}
+function addRecipe($connection, $name_recipe, $ingredients_recipe_input, $link_recipe, $image_link_recipe){
+    $sql = "INSERT INTO recipes (name_recipe, ingredients_recipe, link_recipe, image_link_recipe) VALUES (?,?,?,?);";
+    $stmt = mysqli_stmt_init($connection);
+    if(!mysqli_stmt_prepare($stmt, $sql))
+    {
+    header("location: ../add_recipe.php?error=stmtFailed");
+    exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ssss",  $name_recipe, $ingredients_recipe_input, $link_recipe, $image_link_recipe);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../add_recipe.php?success");
+    exit();
 }
 function createUser($connection, $email, $password)
 {

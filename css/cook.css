@@ -44,7 +44,7 @@ background-color: rgba(0,0,0,.6);
 display: block;
 padding: 5px 10px;
 position: absolute;
-bottom: 1.5%;
+bottom: 1.7vw;
 right: 0;
 left: 0;
 }
@@ -58,7 +58,7 @@ left: 0;
     left: 0;
     background: #000;
     opacity: 0.7;
-    filter: alpha(opacity = 50);
+    
 }
 .recipe .favorite-icon {
     position: absolute;
@@ -103,11 +103,26 @@ left: 0;
 .favorite-icon:hover > .fa-heart {
     color: red;
 }
+#admin {
+    font-size: 1.2vw;
+    bottom: 1vw;
+    left: 1vw;
+    position: absolute;
+}
+.recipe-title {
+    position: relative;
+}
 #sign-up-message {
     font-size: 90%;
     color: rgb(185, 185, 185);
     position: relative;
     top: -7px;
+}
+#it_uses {
+    color: rgb(217, 253, 170); 
+    margin: 0px 0px 0px 1vw;
+    font-size: 1.2vw;
+
 }
 #sign-up-anchor {
     background-color: rgb(49, 23, 119);
@@ -203,8 +218,13 @@ ul {
     background-color:   rgb(32, 35, 63);
     box-shadow: 0px 0px 500px 50px rgba(60, 29, 199, 0.788);
 }
-
-.meals {
+.add-recipe .search-table {
+    color: white;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    box-shadow: 0px 0px 0px 0px;
+}
+ .meals {
     margin-top: 10%;
     position: fixed;
     background-color: inherit;
@@ -237,7 +257,18 @@ ul {
     }
 }
 
-
+.add_recipe_form {
+    color: white;
+    left: 30%;
+    display: flex;
+    height: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    right: 0;
+}
 #ui-id-1 {
     position: fixed;
     color: white;
@@ -275,7 +306,7 @@ ul {
     background-color: #5535E2;
 }
 i {
-    background-color: none;
+    background-color: inherit;
     color: rgb(255, 255, 255) !important;
 }
 
@@ -323,30 +354,47 @@ i {
   max-width: 30%;
   z-index: 9;
 }
+.favorite-icon:hover > .fas:hover {
+    color:red !important;
+}
 .form-container {
   top: 15%;
   padding: 3%;
   background-color: rgb(49, 23, 119);
   border-radius: 6%;
 }
+.form-recipe{
+    top: 15%;
+    padding: 3%;
+    border-radius: 6%;
+  }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input {
   width: 96%;
   margin: 5px 0 22px 0;
   padding: 2%;
   border: none;
   background: rgb(84, 56, 158);
 }
-
+.form-recipe input {
+    width: 96%;
+    margin: 5px 0 22px 0;
+    padding: 2%;
+    border: none;
+    background: rgb(84, 56, 158);
+  }
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus {
   background-color: rgb(84, 56, 158);
   outline: none;
 }
-
+.form-recipe input[type=text]:focus {
+    background-color: rgb(49, 19, 129);
+    outline: none;
+  }
 /* Set a style for the submit/login button */
-.form-container .btn {
+.btn {
   background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -359,9 +407,7 @@ i {
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
+
 .form-container h1 {
     background-color: inherit;
   }
