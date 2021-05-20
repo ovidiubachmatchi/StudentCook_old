@@ -1,3 +1,4 @@
+
 var ingredients_list = new Set()
 
 function put_ingredient(ingredient){
@@ -125,4 +126,16 @@ function wrongPassword() {
 function stmtFailedLogin() {
   openForm();
   document.getElementById('error_login').innerHTML = 'Something went wrong';
+}
+
+function favorite(id) {
+  $.ajax({
+       type: "POST",
+       url: 'php/add_to_favorite.inc.php',
+       data:{favorite: id},
+       success:function(html) {
+         alert(html);
+       }
+
+  });
 }

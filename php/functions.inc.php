@@ -1,5 +1,4 @@
 <?php
-
 function empty_input_signup($email, $password, $password_repeat)
 {
     if(empty($email))

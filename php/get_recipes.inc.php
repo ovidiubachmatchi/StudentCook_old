@@ -12,7 +12,7 @@ function print_recipe_card($row, $procent_match, $inverse_procent, $it_uses) {
         </div>
         </img> 
         
-        <a onclick='' class='favorite-icon' id='id-$row[0]'> <i class='fas fa-heart'></i> </a>
+        <a  onclick='favorite($row[0])' class='favorite-icon'> <i class='fas fa-heart'></i> </a>
         <p id='procent'>$procent_match% match</p>
     </a>
     <div class='bottom_part'>
