@@ -1,7 +1,5 @@
 # StudentCook
-A website that allows you to add ingredients you have at
+A website that allows you to add ingredients you have at <br>
 home and shows you recipes that you can cook <br>
-• Helps you to see all the nutrients of a meal or food
-(calories, fat, protein, etcetera).
-<br>Great way to keep track of
-what you eat and keep a balanced diet
+<br>
+This website is the source of the website
